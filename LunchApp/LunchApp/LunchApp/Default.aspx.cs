@@ -16,9 +16,13 @@ namespace LunchApp
             defualtDailyEvent = ServerCommunication.getDailyEvent(Guid.NewGuid());
         }
 
-        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        protected void createGroup_btn_Click(object sender, EventArgs e)
         {
-            
+        }
+
+        protected void groupList_lstBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
