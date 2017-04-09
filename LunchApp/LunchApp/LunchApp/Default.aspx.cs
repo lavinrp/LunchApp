@@ -30,5 +30,15 @@ namespace LunchApp
         {
             updateDisplayedGroup(groups_lstBox.SelectedIndex);
         }
+
+        protected void groups_lstBox_Init(object sender, EventArgs e)
+        {
+            var avialableGroups = ServerCommunication.GetGroups();
+            groups_lstBox.Items.Clear();
+            foreach (var group in avialableGroups)
+            {
+                groups_lstBox.Items.Add(group.m_name);
+            }
+        }
     }
 }

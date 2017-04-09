@@ -65,7 +65,13 @@ namespace LunchApp
             List<Event> returnEvent = new List<Event>();
             for (int x = 0; x < 10; x++)
             {
-                returnEvent.Add(new Event(("Event " + x), returnLocations[x], DateTime.Today));
+                Event tempEvent = new Event("Event " + x, returnLocations[x], DateTime.Today);
+                tempEvent.m_attendees = returnPeople;
+                foreach (var attendee in returnPeople)
+                {
+                    tempEvent.m_attendeeOrders.Add(attendee.GetID(), attendee.m_savedOrders[0]);
+                }
+                returnEvent.Add(tempEvent);
             }
             return returnEvent;
         }
@@ -78,7 +84,10 @@ namespace LunchApp
             List<Group> returnGroups = new List<Group>();
             for (int x = 0; x < 10; x++)
             {
-                returnGroups.Add(new Group("Group " + x));
+                Group group = new Group("Group " + x);
+                group.m_groupees = returnPerson;
+                group.m_events = returnEvent;
+                returnGroups.Add(group);
             }
             return returnGroups;
         }
