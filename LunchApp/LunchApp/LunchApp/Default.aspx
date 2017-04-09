@@ -2,18 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-<<<<<<< HEAD
-    
 
-    <asp:TextBox ID="TextBox1" runat="server" Height="23px" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
-
-    
-
-    <asp:Table ID="Table1" runat="server" Height="314px" Width="749px">
-    </asp:Table>
-
-    
-=======
 	<!--<head>
 		<title>Lunch App</title>
 		<link href="lunch.css" rel="stylesheet" type="text/css">
@@ -79,8 +68,5 @@
 		</script>
 	
 	</body>
-
-
->>>>>>> origin/Banana
 
 </asp:Content>
