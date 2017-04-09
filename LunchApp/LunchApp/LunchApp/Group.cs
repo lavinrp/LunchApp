@@ -45,5 +45,15 @@ namespace LunchApp.ClassReference
 
             return false;
         }
+
+        public bool DummyGroupGenerater()
+        {
+            for(int i=0; i<10; i++)
+            {
+                Person dumbPerson = new Person(""+i);
+                m_groupees.Add(dumbPerson);
+            }
+            return true;
+        }
     }
 }

@@ -65,7 +65,7 @@ namespace LunchApp
             List<Event> returnEvent = new List<Event>();
             for (int x = 0; x < 10; x++)
             {
-                returnEvent.Add(new Event(("Event " + x), returnLocations[x], owningGroup.m_name, DateTime.Today));
+                returnEvent.Add(new Event(("Event " + x), returnLocations[x], DateTime.Today));
             }
             return returnEvent;
         }
@@ -87,7 +87,7 @@ namespace LunchApp
 
         public static Event getDailyEvent(Guid personalID)
         {
-            return new Event("Wednesday Foo", "CHIPOTLE", "nothing_string", DateTime.Today);
+            return new Event("Wednesday Foo", "CHIPOTLE", DateTime.Today);
         }
 
         public static Group getGroupName(Guid personalID)
@@ -100,9 +100,12 @@ namespace LunchApp
             Group dummyGroup = new Group("Dummy Group");
             for (var i = 0; i < 10; i++)
             {
-                string name = "Person Name " + i;
+                string name = "Person Name ";
+                //string eventName = "EventName " + i;
+                //Event nextevent = new Event(eventName, "location"+i, DateTime.Today);
                 Person person = new Person(name);
                 dummyGroup.m_groupees.Add(person);
+                //dummyGroup.m_events.Add(nextevent);
             }
             return dummyGroup;
         }

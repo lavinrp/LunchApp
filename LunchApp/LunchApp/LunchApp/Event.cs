@@ -15,10 +15,9 @@ namespace LunchApp.ClassReference
         public Dictionary<Guid, Order> m_attendeeOrders;
         public List<Person> m_attendees;
 
-        public Event(string name, string location, string owningGroup, DateTime time)
+        public Event(string name, string location, DateTime time)
         {
             this.m_name = name;
-            this.m_owningGroup = owningGroup;
 
             this.m_location = location;
             this.m_time = time;

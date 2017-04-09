@@ -18,23 +18,17 @@
                 </asp:ListBox>
             </td>
             <td>
-                <asp:MultiView ID="MultiView1" runat="server">
-                    <asp:View ID="View1" runat="server" OnInit="View1_Init">
-                        <asp:Table ID="GroupID" runat="server" Text="testView"
-                            <asp:TableHeaderRow 
-                            runat="server" 
-                            ForeColor="Snow"
-                            BackColor="OliveDrab"
-                            Font-Bold="true">
-                                <asp:TableHeaderCell>Serial</asp:TableHeaderCell>
-                                <asp:TableHeaderCell>Name</asp:TableHeaderCell>
-                                <asp:TableHeaderCell>Value</asp:TableHeaderCell>
-                            </asp:TableHeaderRow>
-                        </asp:Table>
-                    </asp:View>
-                </asp:MultiView>
+                <h3>Attendees</h3>
+                <asp:BulletedList ID="BulletedList1" runat="server">
+                <asp:ListItem Text="testest"> Testestsetsets</asp:ListItem>
+                </asp:BulletedList>
             </td>
-            <td>&nbsp;</td>
+            <td>
+                <h3>Events</h3>
+                <asp:BulletedList ID="BulletedList2" runat="server">
+                    <asp:ListItem>test2</asp:ListItem>
+                </asp:BulletedList>
+            </td>
         </tr>
         <tr>
             <td>

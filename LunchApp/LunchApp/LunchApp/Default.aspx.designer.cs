@@ -31,31 +31,22 @@ namespace LunchApp {
         protected global::System.Web.UI.WebControls.ListBox groups_lstBox;
         
         /// <summary>
-        /// MultiView1 control.
+        /// BulletedList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.MultiView MultiView1;
+        protected global::System.Web.UI.WebControls.BulletedList BulletedList1;
         
         /// <summary>
-        /// View1 control.
+        /// BulletedList2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View View1;
-        
-        /// <summary>
-        /// GroupID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Table GroupID;
+        protected global::System.Web.UI.WebControls.BulletedList BulletedList2;
         
         /// <summary>
         /// profileSettings_btn control.
