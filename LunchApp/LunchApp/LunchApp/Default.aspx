@@ -1,17 +1,17 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="LunchApp._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-	<table style="width:100%; min-height:500px">
+	<table style="table-layout: fixed; width:100%; min-height:500px">
         <tr>
             <td>
-                <asp:Button ID="newGroup_btn" runat="server" Text="New Group" OnClick="newGroup_btn_Click"/>
+                <asp:Button style="width:100%" ID="newGroup_btn" runat="server" Text="New Group" OnClick="newGroup_btn_Click"/>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>
-                <asp:ListBox ID="groups_lstBox" runat="server" OnSelectedIndexChanged="groups_lstBox_SelectedIndexChanged" OnInit="groups_lstBox_Init">
+                <asp:ListBox style="background-color:purple; color:white; width: 100%; min-height:400px" ID="groups_lstBox" runat="server" OnSelectedIndexChanged="groups_lstBox_SelectedIndexChanged" OnInit="groups_lstBox_Init">
                     <asp:ListItem>
                         Default Group
                     </asp:ListItem>
@@ -32,16 +32,7 @@
         </tr>
         <tr>
             <td>
-                <asp:Button ID="profileSettings_btn" runat="server" Text="Profile Settings" OnClick="profileSettings_btn_Click"/>
-            </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>
-                <asp:TextBox ID="notifications_txtBox" runat="server">
-                    No Notifications
-                </asp:TextBox>
+                <asp:Button style="width:100%" ID="profileSettings_btn" runat="server" Text="Profile Settings" OnClick="profileSettings_btn_Click"/>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>

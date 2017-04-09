@@ -82,7 +82,7 @@ namespace LunchApp
             List<Event> returnEvent = CreateEvents();
             Guid.NewGuid();
             List<Group> returnGroups = new List<Group>();
-            for (int x = 0; x < 10; x++)
+            for (int x = 0; x < 4; x++)
             {
                 Group group = new Group("Group " + x);
                 group.m_groupees = returnPerson;

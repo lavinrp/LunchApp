@@ -91,4 +91,7 @@ a:hover {
     position: relative;
     bottom: 0px;
 }
-#
+
+#groups_lstBox ListItem {
+    background: purple
+}
