@@ -12,7 +12,7 @@
         </tr>
         <tr>
             <td>
-                <asp:ListBox ID="groups_lstBox" runat="server">
+                <asp:ListBox ID="groups_lstBox" runat="server" OnSelectedIndexChanged="groups_lstBox_SelectedIndexChanged">
                     <asp:ListItem>
                         Default Group
                     </asp:ListItem>
