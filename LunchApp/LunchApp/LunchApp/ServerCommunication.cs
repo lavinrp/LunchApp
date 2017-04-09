@@ -11,6 +11,16 @@ namespace LunchApp
 
         private static List<Order> CreateOrders()
         {
+
+            Order order1 = new Order("Chipotle", "Burito", 8.57);
+            Order order2 = new Order("TacoBell", "Taco", 100.57);
+            Order order3 = new Order("Currito", "Buritos", 2000.57);
+
+            List<Order> newOrders = new List<Order>();
+            newOrders.Add(order1);
+            newOrders.Add(order2);
+            newOrders.Add(order3);
+
             return new List<Order>();
         }
     
