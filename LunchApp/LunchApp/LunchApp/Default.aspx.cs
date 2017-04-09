@@ -56,7 +56,14 @@ namespace LunchApp
 
         protected void groups_lstBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            updateDisplayedGroup(groups_lstBox.SelectedIndex);
+            if (groups_lstBox.SelectedIndex > 0)
+            {
+                updateDisplayedGroup(groups_lstBox.SelectedIndex);
+            }
+            else
+            {
+                updateDisplayedGroup(0);
+            }
         }
 
         protected void groups_lstBox_Init(object sender, EventArgs e)
