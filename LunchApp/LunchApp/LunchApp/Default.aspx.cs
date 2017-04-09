@@ -10,11 +10,11 @@ namespace LunchApp
 {
     public partial class _Default : Page
     {
-        protected void updateDisplayGroup(int index)
+        protected void updateDisplayedGroup(int index)
         {
-            //Group groupToDisplay = getGroupInfo(index);get group data
-            
+            PopulateDisplayedGroupList(index);
         }
+
         protected void newGroup_btn_Click(object sender, EventArgs e)
         {
             groups_lstBox.Items.Add(new ListItem("Default Group"));
@@ -31,18 +31,25 @@ namespace LunchApp
         }
 
         //, System.Web.UI.WebControls.BulletedList AttendeeList
-        public bool PopulateGroupList(int groupNum)
+        public bool PopulateDisplayedGroupList(int groupNum)
         {
-            //AttendeeList.Items.Clear();
-            //foreach (var attendee in )
-            //{
-            //    ListItem li = new ListItem();
+            Group dummyGroup = new Group("testyGroup");
+            ServerCommunication.createDummyGroup();
+            BulletedList1.Items.Clear();
+
+            foreach (var attendee in dummyGroup.m_groupees)
+            {
+                ListItem li = new ListItem();
                 //li.Value = "*.html";  //html goes here i.e.  xtab1.html
-            //    li.Text = attendee.m_name;  //text name goes i.e. here tab1
-                //AttendeeList.Items.Add(li);
-            //}
+                li.Text = attendee.m_name;  //text name goes i.e. here tab1
+                BulletedList1.Items.Add(li);
+            }
             return false;
         }
 
+        protected void groups_lstBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            updateDisplayedGroup(groups_lstBox.SelectedIndex);
+        }
     }
 }
