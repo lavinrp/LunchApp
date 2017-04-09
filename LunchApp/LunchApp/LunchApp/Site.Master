@@ -19,20 +19,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-    <!-- Sidebar -->
-    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width: 25%; height: 100%" id="nav-left-side">
-        <h3 class="w3-bar-item">My Groups</h3>
-        <a href="#" class="w3-bar-item w3-button">Link 1</a>
-        <a href="#" class="w3-bar-item w3-button">Link 2</a>
-        <a href="#" class="w3-bar-item w3-button">Link 3</a>
-        <a href="#" class="w3-bar-item w3-button">Link 4</a>
-        <a href="#" class="w3-bar-item w3-button">Link 5</a>
-
-    </div>
-
 
     <!-- Page Content -->
-    <div style="margin-left: 20%">
+    <div>
         <form runat="server">
             <asp:ScriptManager runat="server">
                 <Scripts>
@@ -55,42 +44,6 @@
                 </Scripts>
             </asp:ScriptManager>
 
-            <div class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" runat="server" href="~/">Lunch Runner</a>
-                    </div>
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <!--<li><a runat="server" href="~/">Home</a></li>
-                            <li><a runat="server" href="~/About">About</a></li>-->
-                            <li><a runat="server" href="~/Calander">Calander</a></li>
-                            <!--<li><a runat="server" href="~/Contact">Contact</a></li>-->
-                        </ul>
-                        <asp:LoginView runat="server" ViewStateMode="Disabled">
-                            <AnonymousTemplate>
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li><a runat="server" href="~/Account/Register">Register</a></li>
-                                    <li><a runat="server" href="~/Account/Login">Log in</a></li>
-                                </ul>
-                            </AnonymousTemplate>
-                            <LoggedInTemplate>
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
-                                    <li>
-                                        <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                                    </li>
-                                </ul>
-                            </LoggedInTemplate>
-                        </asp:LoginView>
-                    </div>
-                </div>
-            </div>
             <div class="container body-content">
                 <asp:ContentPlaceHolder ID="MainContent" runat="server">
                 </asp:ContentPlaceHolder>
@@ -100,10 +53,7 @@
                 </footer>
             </div>
         </form>
-
-
     </div>
-
 </body>
 </html>
 
