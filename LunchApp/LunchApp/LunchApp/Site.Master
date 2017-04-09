@@ -20,15 +20,19 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!-- Sidebar -->
-    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width: 25%">
-        <h3 class="w3-bar-item">Menu</h3>
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width: 25%; height: 100%" id="nav-left-side">
+        <h3 class="w3-bar-item">My Groups</h3>
         <a href="#" class="w3-bar-item w3-button">Link 1</a>
         <a href="#" class="w3-bar-item w3-button">Link 2</a>
         <a href="#" class="w3-bar-item w3-button">Link 3</a>
+        <a href="#" class="w3-bar-item w3-button">Link 4</a>
+        <a href="#" class="w3-bar-item w3-button">Link 5</a>
+
     </div>
 
+
     <!-- Page Content -->
-    <div style="margin-left: 25%">
+    <div style="margin-left: 20%">
         <form runat="server">
             <asp:ScriptManager runat="server">
                 <Scripts>
@@ -63,10 +67,10 @@
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li><a runat="server" href="~/">Home</a></li>
-                            <li><a runat="server" href="~/About">About</a></li>
+                            <!--<li><a runat="server" href="~/">Home</a></li>
+                            <li><a runat="server" href="~/About">About</a></li>-->
                             <li><a runat="server" href="~/Calander">Calander</a></li>
-                            <li><a runat="server" href="~/Contact">Contact</a></li>
+                            <!--<li><a runat="server" href="~/Contact">Contact</a></li>-->
                         </ul>
                         <asp:LoginView runat="server" ViewStateMode="Disabled">
                             <AnonymousTemplate>
