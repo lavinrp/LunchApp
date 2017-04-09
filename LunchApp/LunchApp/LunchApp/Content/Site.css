@@ -1,38 +1,78 @@
-﻿/* Move down content because we have a fixed navbar that is 50px tall */
-body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿/* Lunch app styles */
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+/*Float containers*/
+
+#container-left {
+    width: 30%;
+    height: 1000px;
+    background: purple;
+    float: left;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+#container-right {
+    width: 70%;
+    height: 1000px;
+    background: grey;
+    float: right;
 }
 
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="tel"],
-input[type="select"] {
-    max-width: 280px;
+/* Format nav left*/
+#nav-left-top ul li {
+    color: white;
+    text-align: center;
+    border-bottom: solid 1px white;
+    border-top: solid 1px white;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .jumbotron {
-        margin-top: 20px;
-    }
-    .body-content {
-        padding: 0;
-    }
+#nav-left-bottom ul li {
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    text-align: center;
+    border-bottom: solid 1px white;
+    border-top: solid 1px white;
+}
+
+#nav-left-bottom ul {
+    position: absolute;
+    bottom: 0px;
+    width: 28%;
+}
+/* Logo title */
+#logo {
+    width: 30%;
+    color: white;
+    line-height: 75px;
+    text-align: center;
+}
+
+#nav-top {
+    background-color: grey;
+}
+
+/* Button Styles */
+.button {
+    text-decoration: none;
+    color: white
+}
+
+li:hover {
+    background-color: violet;
+}
+
+a:hover {
+    color: white;
+}
+
+#profile-box {
+    width: 350px;
+    height: 150px;
+    position: absolute;
+    bottom: 0px;
+    left: 30%;
+    background: white;
 }

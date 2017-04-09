@@ -2,41 +2,72 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-    </div>
+	<!--<head>
+		<title>Lunch App</title>
+		<link href="lunch.css" rel="stylesheet" type="text/css">
+	</head>-->
 
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
-        </div>
-    </div>
+	<body>
+		
+			<!--<div id="nav-top">
+				<div id="logo">
+					<h2>Lunch App</h2>
+				</div>
+			
+			</div>-->
+		
+			<div id="container-left">
+				<div id="nav-left-top">
+					<ul>
+						<li>
+							<h3><a id="create-group" href="#button" id="button1" class="button">Create new group</a></h3>
+						</li>
+						<li>
+							<h3><a href="#button" id="button1" class="button">Group</a></h3>
+						</li>
+						
+					
+					</ul>
+					
+				</div>
+				<div id="nav-left-bottom">
+					<ul>
+						<li>
+							<h3><a href="#button" id="button1" class="button">profile settings</a></h3>
+						</li>
+					</ul>
+					
+				</div>
+				<!--<div id = "profile-box">
+					<h4>Name: Dillon</h4>
+					<h4>My Orders</h4>
+					<h4>My Responsibilities</h4>
+					<h4>Debt</h4>
+					<h4>Dues</h4>
+						
+				</div>-->
+			</div>
+		
+		<div id="container-right">
+		
+		</div>
+		
+		<script   src="http://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+		
+		
+		<!-- script to add new group -->
+		<script type="text/javascript">
+		
+			$( "#create-group" ).click(function() {
+						$( "#nav-left-top ul" ).append('<li><h3><a href="#button" id="button1" class="button">Group</a></h3></li>');
+					});
+		
+		
+		
+		</script>
+	
+	</body>
+
+
 
 </asp:Content>
