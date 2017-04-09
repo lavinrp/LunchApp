@@ -45,19 +45,5 @@ namespace LunchApp.ClassReference
 
             return false;
         }
-
-        //, System.Web.UI.WebControls.BulletedList AttendeeList
-        public bool PopulateGroupList(int groupNum)
-        {
-            AttendeeList.Items.Clear();
-            foreach (var attendee in m_groupees)
-            {
-                ListItem li = new ListItem();
-                //li.Value = "*.html";  //html goes here i.e.  xtab1.html
-                li.Text = attendee.m_name;  //text name goes i.e. here tab1
-                AttendeeList.Items.Add(li);
-            }
-            return false;
-        }
     }
 }

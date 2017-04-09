@@ -80,6 +80,11 @@ namespace LunchApp
             return returnGroups;
         }
 
+        public static List<Group> GetGroups()
+        {
+            return CreateGroups();
+        }
+
         public static Event getDailyEvent(Guid personalID)
         {
             return new Event("Wednesday Foo", "CHIPOTLE", "nothing_string", DateTime.Today);
