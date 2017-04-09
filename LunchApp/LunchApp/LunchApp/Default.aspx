@@ -11,7 +11,7 @@
         </tr>
         <tr>
             <td>
-                <asp:ListBox ID="groups_lstBox" runat="server" OnSelectedIndexChanged="groups_lstBox_SelectedIndexChanged">
+                <asp:ListBox ID="groups_lstBox" runat="server" OnSelectedIndexChanged="groups_lstBox_SelectedIndexChanged" OnInit="groups_lstBox_Init">
                     <asp:ListItem>
                         Default Group
                     </asp:ListItem>
@@ -20,7 +20,7 @@
             <td>
                 <h3>Attendees</h3>
                 <asp:BulletedList ID="BulletedList1" runat="server">
-                <asp:ListItem Text="testest"> Testestsetsets</asp:ListItem>
+                    <asp:ListItem Text="testest"> Testestsetsets</asp:ListItem>
                 </asp:BulletedList>
             </td>
             <td>

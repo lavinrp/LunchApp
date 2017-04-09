@@ -30,7 +30,7 @@ namespace LunchApp
             newOrders.Add(order2);
             newOrders.Add(order3);
 
-            return new List<Order>();
+            return newOrders;
         }
     
         private static List<Person> CreatePeople()
@@ -54,10 +54,10 @@ namespace LunchApp
                 returnPeople.Add(person);
 
             }
-            return new List<Person>();
+            return returnPeople;
         }
 
-        private static List<Event> CreateEvents(Group owningGroup)
+        private static List<Event> CreateEvents()
         {
             List<string> returnLocations = CreateLocations();
             List<Order> returnOrders = CreateOrders();
@@ -65,17 +65,29 @@ namespace LunchApp
             List<Event> returnEvent = new List<Event>();
             for (int x = 0; x < 10; x++)
             {
-                returnEvent.Add(new Event(("Event " + x), returnLocations[x], DateTime.Today));
+                Event tempEvent = new Event("Event " + x, returnLocations[x], DateTime.Today);
+                tempEvent.m_attendees = returnPeople;
+                foreach (var attendee in returnPeople)
+                {
+                    tempEvent.m_attendeeOrders.Add(attendee.GetID(), attendee.m_savedOrders[0]);
+                }
+                returnEvent.Add(tempEvent);
             }
             return returnEvent;
         }
 
         private static List<Group> CreateGroups()
-        {   
+        {
+            List<Person> returnPerson = CreatePeople();
+            List<Event> returnEvent = CreateEvents();
+            Guid.NewGuid();
             List<Group> returnGroups = new List<Group>();
             for (int x = 0; x < 10; x++)
             {
-                returnGroups.Add(new Group("Group " + x));
+                Group group = new Group("Group " + x);
+                group.m_groupees = returnPerson;
+                group.m_events = returnEvent;
+                returnGroups.Add(group);
             }
             return returnGroups;
         }
