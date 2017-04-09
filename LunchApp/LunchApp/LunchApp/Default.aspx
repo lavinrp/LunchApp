@@ -20,7 +20,7 @@
             </td>
             <td>
                 <asp:MultiView ID="MultiView1" runat="server">
-                    <asp:View ID="View1" runat="server" OnInit="View1_Init">
+                    <asp:View ID="View1" runat="server">
                     </asp:View>
                 </asp:MultiView>
             </td>
