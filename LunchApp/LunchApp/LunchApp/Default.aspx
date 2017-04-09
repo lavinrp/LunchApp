@@ -9,7 +9,8 @@
 	</head>-->
 
 	<body>
-		
+		<script runat="server">
+		</script>
 			<!--<div id="nav-top">
 				<div id="logo">
 					<h2>Lunch App</h2>
@@ -22,9 +23,6 @@
 					<ul>
 						<li>
 							<h3><a id="create-group" href="#button" id="button1" class="button">Create new group</a></h3>
-						</li>
-						<li>
-							<h3><a href="#button" id="button1" class="button">Group</a></h3>
 						</li>
 						
 					
@@ -50,7 +48,9 @@
 			</div>
 		
 		<div id="container-right">
-		
+            <h3>Hello</h3>
+            <asp:BulletedList id="AttendeeList" BulletStyle="Disc" DisplayMode="LinkButton" runat="server" >
+            </asp:BulletedList>
 		</div>
 		
 		<script   src="http://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>

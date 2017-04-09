@@ -8,16 +8,17 @@ namespace LunchApp.ClassReference
     public class Event : IDedNamedClass
     {
         public string m_location;
+        public string m_owningGroup;
         public DateTime m_time;
         public Person m_runner;
 
         public Dictionary<Guid, Order> m_attendeeOrders;
         public List<Person> m_attendees;
 
-        public Event(string name, string location, DateTime time)
+        public Event(string name, string location, string owningGroup, DateTime time)
         {
             this.m_name = name;
-
+            this.m_owningGroup = owningGroup;
 
             this.m_location = location;
             this.m_time = time;

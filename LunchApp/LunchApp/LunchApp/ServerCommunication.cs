@@ -57,7 +57,7 @@ namespace LunchApp
             return new List<Person>();
         }
 
-        private static List<Event> CreateEvents()
+        private static List<Event> CreateEvents(Group owningGroup)
         {
             List<string> returnLocations = CreateLocations();
             List<Order> returnOrders = CreateOrders();
@@ -65,16 +65,13 @@ namespace LunchApp
             List<Event> returnEvent = new List<Event>();
             for (int x = 0; x < 10; x++)
             {
-                returnEvent.Add(new Event(("Event " + x), returnLocations[x], DateTime.Today));
+                returnEvent.Add(new Event(("Event " + x), returnLocations[x], owningGroup.m_name, DateTime.Today));
             }
             return returnEvent;
         }
 
         private static List<Group> CreateGroups()
         {   
-            List<Person> returnPerson = CreatePeople();
-            List<Event> returnEvent = CreateEvents();
-            Guid.NewGuid();
             List<Group> returnGroups = new List<Group>();
             for (int x = 0; x < 10; x++)
             {
@@ -85,12 +82,24 @@ namespace LunchApp
 
         public static Event getDailyEvent(Guid personalID)
         {
-            return new Event("Wednesday Foo", "CHIPOTLE", DateTime.Today);
+            return new Event("Wednesday Foo", "CHIPOTLE", "nothing_string", DateTime.Today);
         }
 
         public static Group getGroupName(Guid personalID)
         {
             return new Group("dummy");
+        }
+
+        public static Group createDummyGroup()
+        {
+            Group dummyGroup = new Group("Dummy Group");
+            for (var i = 0; i < 10; i++)
+            {
+                string name = "Person Name " + i;
+                Person person = new Person(name);
+                dummyGroup.m_groupees.Add(person);
+            }
+            return dummyGroup;
         }
 
     }
