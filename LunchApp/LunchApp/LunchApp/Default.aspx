@@ -2,30 +2,43 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-	<table style="width:100%;">
+	<table style="width:100%; min-height:500px">
         <tr>
             <td>
-                <asp:Button ID="Button1" runat="server" Text="Button" />
+                <asp:Button ID="newGroup_btn" runat="server" Text="New Group" OnClick="newGroup_btn_Click"/>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>
-                <asp:ListBox ID="ListBox1" runat="server"></asp:ListBox>
+                <asp:ListBox ID="groups_lstBox" runat="server">
+                    <asp:ListItem>
+                        Default Group
+                    </asp:ListItem>
+                </asp:ListBox>
+            </td>
+            <td>
+                <asp:MultiView ID="MultiView1" runat="server">
+                    <asp:View ID="View1" runat="server" OnInit="View1_Init">
+                    </asp:View>
+                </asp:MultiView>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                <asp:Button ID="profileSettings_btn" runat="server" Text="Profile Settings" OnClick="profileSettings_btn_Click"/>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>
-                <asp:Button ID="Button2" runat="server" Text="Button" />
+                <asp:TextBox ID="notifications_txtBox" runat="server">
+                    No Notifications
+                </asp:TextBox>
             </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>

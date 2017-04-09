@@ -10,19 +10,16 @@ namespace LunchApp
 {
     public partial class _Default : Page
     {
-        Event defualtDailyEvent;
-        protected void Page_Load(object sender, EventArgs e)
+
+        protected void newGroup_btn_Click(object sender, EventArgs e)
         {
-            defualtDailyEvent = ServerCommunication.getDailyEvent(Guid.NewGuid());
+            groups_lstBox.Items.Add(new ListItem("Default Group"));
         }
 
-        protected void createGroup_btn_Click(object sender, EventArgs e)
-        {
-        }
-
-        protected void groupList_lstBox_SelectedIndexChanged(object sender, EventArgs e)
+        protected void profileSettings_btn_Click(object sender, EventArgs e)
         {
 
         }
+
     }
 }

@@ -13,22 +13,22 @@ namespace LunchApp {
     public partial class _Default {
         
         /// <summary>
-        /// Button1 control.
+        /// newGroup_btn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button newGroup_btn;
         
         /// <summary>
-        /// ListBox1 control.
+        /// groups_lstBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox ListBox1;
+        protected global::System.Web.UI.WebControls.ListBox groups_lstBox;
         
         /// <summary>
         /// MultiView1 control.
@@ -49,21 +49,21 @@ namespace LunchApp {
         protected global::System.Web.UI.WebControls.View View1;
         
         /// <summary>
-        /// Button2 control.
+        /// profileSettings_btn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button profileSettings_btn;
         
         /// <summary>
-        /// TextBox1 control.
+        /// notifications_txtBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox notifications_txtBox;
     }
 }
