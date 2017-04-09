@@ -59,7 +59,7 @@ namespace LunchApp
 
         private static List<Event> CreateEvents()
         {
-            List<String> returnLocations = CreateLocations();
+            List<string> returnLocations = CreateLocations();
             List<Order> returnOrders = CreateOrders();
             List<Person> returnPeople = CreatePeople();
             List<Event> returnEvent = new List<Event>();
