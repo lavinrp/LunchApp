@@ -24,7 +24,7 @@
 							<h3><a id="create-group" href="#button" id="button1" class="button">Create new group</a></h3>
 						</li>
 						<li>
-							<h3><a href="#button" id="button1" class="button">Group</a></h3>
+                            <h3><asp:Button ID="GroupButton0" runat="server" CssClass="AspButton" Text="DefaultGroup" /></h3>
 						</li>
 						
 					
@@ -34,7 +34,7 @@
 				<div id="nav-left-bottom">
 					<ul>
 						<li>
-							<h3><a href="#button" id="button1" class="button">profile settings</a></h3>
+                            <h3><asp:Button ID="Button2" CssClass="AspButton" runat="server" Text="profile settings" /></h3>
 						</li>
 					</ul>
 					
